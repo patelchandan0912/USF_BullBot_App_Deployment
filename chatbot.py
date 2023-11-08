@@ -185,7 +185,7 @@ if uploaded_file is not None:
         """
 
 # Create a button to check Pre-requisite
-if st.button("Submit to CheckPre-requisite"):
+if st.button("Submit to Check Pre-requisite"):
     # Process the user's question and get a response from the GenAI Assistant
     # Add your code for question answering here
     def get_completion(prompt, model="gpt-4"):
@@ -260,12 +260,12 @@ with prompt_placeholder: # this is the container for the chat input field
         on_click=on_click_callback,  # important! this set's the callback function for the submit button
     )
     
-debug_placeholder.caption(  # display debugging information
-    f"""
-    Used {st.session_state.token_count} tokens \n
-    Debug Langchain.coversation:
-    {st.session_state.conversation.memory.buffer}
-    """
-    )
+# debug_placeholder.caption(  # display debugging information
+#     f"""
+#     Used {st.session_state.token_count} tokens \n
+#     Debug Langchain.coversation:
+#     {st.session_state.conversation.memory.buffer}
+#     """
+#     )
 
 
